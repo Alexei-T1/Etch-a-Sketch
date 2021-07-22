@@ -1,0 +1,19 @@
+
+.container {
+    margin: 200px auto;
+
+    width: 50vh;
+    height: 50vh;
+    display: flex;
+    flex-flow: row wrap;
+    outline: 5px solid olivedrab;
+}
+.container_row {
+    width: 100%;
+    display: flex; 
+}
+.item {
+    flex: 1;
+    background-color: rgb(255, 255, 255);
+    border: 0.2px solid black;
+}
