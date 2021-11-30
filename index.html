@@ -10,12 +10,25 @@
 </head>
 <body class="container_main">
     <header class="header">
-        <h1 class="title">Etch-a-Sketch</h1>
-        <div class="settings_mode"></div>
-        <div class="settings_ranges"><input type="range">
-        <span class="value"></span></div>
+        <h1 class="title header_title">Etch-a-Sketch</h1>
+        <div class="settings_mode text_button">
+            <ul class="header_list list list_modes">
+                <li class="list_mode"><button class="mode">simple mode</button></li>
+                <li class="list_mode"><button class="mode">rainbow mode</button></li>
+                <li class="list_mode"><button class="mode">ease mode</button></li>
+            </ul>
+            <ul class="list list_settings">
+                <li class="settings_set"><input type="check" class="set-setting"></li>
+                <li class="settings_set"><input type="color" class="set-setting"></li>
+            </ul>
+        </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+        <div class="main_range settings_ranges">
+            <label for=""><input type="range"></label>
+            <label for=""><input type="range"></label>
+        </div>
+    </main>
     <footer class="footer">footer</footer>
  <script src="js/script.js"></script>   
 </body>
