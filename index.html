@@ -14,12 +14,15 @@
         <div class="settings_mode text_button">
             <ul class="header_list list list_modes">
                 <li class="list_mode"><button class="mode">simple mode</button></li>
-                <li class="list_mode"><button class="mode">rainbow mode</button></li>
-                <li class="list_mode"><button class="mode">ease mode</button></li>
+                <li class="list_mode"><button class="mode rainbow_mode">rainbow mode</button></li>
+                <li class="list_mode"><button class="mode ease_mode">ease mode</button></li>
             </ul>
             <ul class="list list_settings">
-                <li class="settings_set"><input type="check" class="set-setting"></li>
-                <li class="settings_set"><input type="color" class="set-setting"></li>
+                <li class="settings_set hover_set"><span class="hover_set_text">Hovering:</span>
+                    <input id="checkbox" type="checkbox" class="set-setting checkbox">
+                    <label class="switcher_hover" for="checkbox"></label></li>
+                <li class="settings_set set_input"><span class="hover_set_text">Pick color:</span><label class="set_color" 
+                    for="color"><input id="color" type="color" class="set-setting color"></label></li>
             </ul>
         </div>
     </header>
@@ -30,6 +33,7 @@
         </div>
     </main>
     <footer class="footer">footer</footer>
- <script src="js/script.js"></script>   
+ <script type="module" src="js/script.js"></script>
+ <script type="module" src="js/set-color.js"></script>    
 </body>
 </html>

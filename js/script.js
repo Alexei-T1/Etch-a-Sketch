@@ -1,5 +1,5 @@
-COUNT_H = 16;
-COUNT_V = 16;
+const COUNT_H = 16;
+const COUNT_V = 16;
 
 function creat(COUNT_H, COUNT_V) {
     let div_container = document.createElement("div");

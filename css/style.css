@@ -40,19 +40,92 @@ body {
 }
 .list {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.settings_set {
+    display: flex;
+    align-items: center;
 }
 .header_list {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.mode {
+    width: 180px;
 }
 .list_mode:not(:last-child) {
     margin-right: 0.8rem;
 }
 .mode {
-    padding: 5px 16px;
+    padding: 10px 15px;
     background-color: rgb(196, 195, 195);
-    border-radius: 1rem;
+    border-radius: 22px;
     border: #000 3px solid;
+    cursor: pointer;
 }
+.mode:active {
+    transform: translateY(5px);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.03s ease, box-shadow 0.03s linear;
+}
+.rainbow_mode {
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.651), rgba(0, 128, 0, 0.562), rgba(0, 0, 255, 0.473));
+    border-left-color: rgba(255, 0, 0, 0.808);
+    border-top-color: rgba(0, 128, 0, 0.801);
+    border-right-color: rgba(0, 0, 255, 0.719);
+    border-bottom-color: rgba(46, 45, 45, 0.849);
+}
+.ease_mode {
+    color: #fff;
+    background-color: #000;
+    border-radius: 22px;
+    border-color: rgb(196, 195, 195);
+}
+.hover_set {
+    display: flex;
+}
+.hover_set_text {
+    margin-right: 15px;
+    line-height: 2rem;
+}
+.checkbox {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.switcher_hover {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 2rem;
+    background-color: rgb(196, 195, 195);
+    border-radius: 2rem;
+    border: #000 2px solid;
+    cursor: pointer;
+}
+
+.switcher_hover::after {
+    display: inline-block;
+    content: '';
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    margin-left: 0.25rem;
+}
+.switcher_hover::after {
+    background: radial-gradient(#fff, #fff 2px, 
+    #000 4px, #000);
+}
+.checkbox:checked ~ .switcher_hover::after {
+    margin-left: auto;
+    margin-right: 0.25rem;   
+}
+.checkbox:checked ~ .switcher_hover::after {
+    background: radial-gradient(#000, #000 2px, 
+    #fff 4px, #fff);
+}
+
 .container_field {
     margin: auto auto;
     width: 400px;
@@ -71,9 +144,23 @@ body {
     border: 0.2px solid black;
 }
 .main {
-  
     
 }
 .main_range {
     margin-top: 2rem;
+}
+.set_input {
+    /* margin: auto;  */
+}
+.set_color {
+    display: block;
+    background-color: blueviolet;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.color {
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
