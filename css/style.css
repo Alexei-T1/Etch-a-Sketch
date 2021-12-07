@@ -127,12 +127,13 @@ body {
 }
 
 .container_field {
-    margin: auto auto;
+    margin: 0 auto;
     width: 400px;
     height: 400px;
     display: flex;
     flex-flow: row wrap;
-    outline: 15px solid olivedrab;
+    outline: 15px groove olivedrab;
+    border: 3px solid rgba(196, 195, 195, 0.5);
 }
 .container_row {
     width: 100%;
@@ -144,7 +145,7 @@ body {
     border: 0.2px solid black;
 }
 .main {
-    
+    position: relative;
 }
 .main_range {
     margin-top: 2rem;
@@ -158,9 +159,23 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border: rgb(196, 195, 195) 3px solid;
+    cursor: pointer;
 }
 .color {
-    width: 0;
+    width: 0;   
     height: 0;
     visibility: hidden;
 }
+.set_range {
+    width: 100%;
+}
+.input_range {
+    width: 100%;
+}
+.vertical {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: rotate(90deg) translate(calc(-50% - 2rem - 13px), calc(200px + 15px + 2rem));
+}   
