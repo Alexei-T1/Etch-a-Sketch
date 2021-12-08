@@ -19,11 +19,24 @@
                 <li class="list_mode"><button class="mode ease_mode">ease mode</button></li>
             </ul>
             <ul class="list list_settings">
-                <li class="settings_set hover_set"><span class="hover_set_text">Hovering:</span>
+                <li class="settings_set hover_set">
+                    <span class="hover_set_text">Hovering:</span>
                     <input id="checkbox" type="checkbox" class="set-setting checkbox">
-                    <label class="switcher_hover" for="checkbox"></label></li>
-                <li class="settings_set set_input"><span class="hover_set_text">Pick color:</span><label class="set_color" 
-                    for="color"><input id="color" type="color" class="set-setting color"></label></li>
+                    <label class="switcher_hover" for="checkbox"></label>
+                </li>
+                <li class="settings_set">
+                    <label class="hover_set_text" for="sizePixel">Size pixel:</label>
+                    <select class="select_set" name="sizePixel" id="sizePixel">
+                        <option value="16">16px</option>
+                        <option value="32">32px</option>
+                        <option value="48">48px</option>
+                        <option value="64">64px</option>
+                    </select>
+                </li>
+                <li class="settings_set set_input">
+                    <span class="hover_set_text">Pick color:</span><label class="set_color" 
+                    for="color"><input id="color" type="color" class="set-setting color"></label>
+                </li>
             </ul>
         </div>
     </header>
