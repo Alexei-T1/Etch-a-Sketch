@@ -1,5 +1,4 @@
 const colorInptut = document.querySelector('#color');
-console.log(colorInptut.value, '         colorInptut color');
 const currentColor = colorInptut.value;
 
 function setColor(e) {

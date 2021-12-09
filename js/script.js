@@ -23,6 +23,6 @@ function creat(COUNT_H, COUNT_V) {
 }
 
 const div_container = creat(COUNT_H, COUNT_V);
-console.log(div_container);
+
 const main = document.querySelector('.main');
 main.insertAdjacentElement("afterbegin", div_container);
