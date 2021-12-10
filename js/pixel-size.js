@@ -1,7 +1,12 @@
-const COUNT_H = 16;
-const COUNT_V = 16;
+const main = document.querySelector('.main');
+const select = document.querySelector('#sizePixel');
 
-function creat(COUNT_H, COUNT_V) {
+
+function creat(COUNT_H = select.value, COUNT_V  = select.value) {
+    COUNT_H = select.value;
+    COUNT_V = COUNT_H;
+    console.log('here creat  ', select.value);
+
     let div_container = document.createElement("div");
 
     div_container.classList.add("container_field");
@@ -22,7 +27,13 @@ function creat(COUNT_H, COUNT_V) {
     return div_container;
 }
 
-const div_container = creat(COUNT_H, COUNT_V);
-
-const main = document.querySelector('.main');
+const div_container = creat();
 main.insertAdjacentElement("afterbegin", div_container);
+
+select.onchange = () => {
+    const currentField = document.querySelector('.container_field');
+
+    console.log('here event   ', select.value);
+
+    currentField.replaceWith(creat(select.value, select.value));
+}
