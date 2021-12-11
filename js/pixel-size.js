@@ -1,3 +1,5 @@
+import { setRange, rangeSizeHor,  rangeSizeVer } from './size-field.js';
+
 const main = document.querySelector('.main');
 const select = document.querySelector('#sizePixel');
 
@@ -29,6 +31,7 @@ function creat(COUNT_H = select.value, COUNT_V  = select.value) {
 
 const div_container = creat();
 main.insertAdjacentElement("afterbegin", div_container);
+rangeSizeVer.style.width = div_container.clientHeight + 'px';
 
 select.onchange = () => {
     const currentField = document.querySelector('.container_field');
@@ -36,4 +39,7 @@ select.onchange = () => {
     console.log('here event   ', select.value);
 
     currentField.replaceWith(creat(select.value, select.value));
+    rangeSizeHor.value = 400;
+    rangeSizeVer.value = 400;
+    setRange();
 }
