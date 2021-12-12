@@ -1,4 +1,5 @@
 import { setRange, rangeSizeHor,  rangeSizeVer } from './size-field.js';
+import { currentColor } from './set-color.js';
 
 const main = document.querySelector('.main');
 const select = document.querySelector('#sizePixel');
@@ -20,7 +21,11 @@ function creat(COUNT_H = select.value, COUNT_V  = select.value) {
         div_container.append(div_container_row);
 
         for (let i =  0; i < COUNT_H; i++){
-            let div_item = document.createElement("div")
+            let div_item = document.createElement("div");
+
+            div_item.onmouseover = () => {
+                div_item.style.backgroundColor = currentColor;
+            }
 
             div_item.classList.add("item");
             div_container_row.append(div_item);   

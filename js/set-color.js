@@ -1,11 +1,17 @@
 const colorInptut = document.querySelector('#color');
-const currentColor = colorInptut.value;
+colorInptut.value = '#C4C3C3';
+let currentColor = colorInptut.value;
 
 function setColor(e) {
-    if(currentColor !=  colorInptut.value) {
-        const labelColor = document.querySelector('.set_color');
+    const labelColor = document.querySelector('.set_color');
+    console.log('load')
+    if(labelColor.style.backgroundColor !=  colorInptut.value) {
         labelColor.style.backgroundColor = colorInptut.value;
+        currentColor = colorInptut.value
     }
 }
 
-colorInptut.addEventListener('change', setColor);
+colorInptut.addEventListener('input', setColor);
+window.addEventListener('load', setColor);
+
+export { currentColor };
