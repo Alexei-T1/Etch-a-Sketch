@@ -59,7 +59,7 @@ body {
 }
 .mode {
     padding: 10px 15px;
-    background-color: rgb(196, 195, 195);
+    background-color: #C4C3C3;
     border-radius: 22px;
     border: #000 3px solid;
     cursor: pointer;
@@ -80,7 +80,7 @@ body {
     color: #fff;
     background-color: #000;
     border-radius: 22px;
-    border-color: rgb(196, 195, 195);
+    border-color: #C4C3C3;
 }
 .hover_set {
     display: flex;
@@ -100,7 +100,7 @@ body {
     align-items: center;
     width: 60px;
     height: 2rem;
-    background-color: rgb(196, 195, 195);
+    background-color: #C4C3C3;
     border-radius: 2rem;
     border: #000 2px solid;
     cursor: pointer;
@@ -127,7 +127,7 @@ body {
     #fff 4px, #fff);
 }
 .select_set {
-    background-color: rgb(196, 195, 195);
+    background-color: #C4C3C3;
     border-radius: 2rem;
     border: #000 2px solid;
     cursor: pointer;
@@ -136,11 +136,11 @@ body {
 }  
 .set_color {
     display: block;
-    background-color: rgb(196, 195, 195);
+    background-color: #C4C3C3;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: rgb(196, 195, 195) 3px solid;
+    border: #C4C3C3 3px solid;
     cursor: pointer;
 }
 .color {

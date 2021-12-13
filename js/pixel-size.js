@@ -1,8 +1,16 @@
 import { setRange, rangeSizeHor,  rangeSizeVer } from './size-field.js';
-import { currentColor } from './set-color.js';
+import { currentColor, getRandomColor } from './set-color.js';
 
 const main = document.querySelector('.main');
 const select = document.querySelector('#sizePixel');
+
+const rainbowButton = document.querySelector('.rainbow_mode');
+let check = 'simple';
+
+rainbowButton.onclick = () => {
+    check = 'random';
+    console.log(check);
+ }
 
 
 function creat(COUNT_H = select.value, COUNT_V  = select.value) {
@@ -24,7 +32,13 @@ function creat(COUNT_H = select.value, COUNT_V  = select.value) {
             let div_item = document.createElement("div");
 
             div_item.onmouseover = () => {
+                
+
                 div_item.style.backgroundColor = currentColor;
+                if(check == 'random') {
+                    div_item.style.backgroundColor = getRandomColor();
+                    console.log(getRandomColor());
+                }
             }
 
             div_item.classList.add("item");
