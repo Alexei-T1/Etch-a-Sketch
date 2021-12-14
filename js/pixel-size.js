@@ -5,18 +5,25 @@ const main = document.querySelector('.main');
 const select = document.querySelector('#sizePixel');
 
 const rainbowButton = document.querySelector('.rainbow_mode');
+const simpleButton = document.querySelector('.mode');
+const easeButton = document.querySelector('.ease_mode');
 let check = 'simple';
 
 rainbowButton.onclick = () => {
     check = 'random';
-    console.log(check);
  }
+simpleButton.onclick = () => {
+    check = 'simple';
+ }
+easeButton.onclick = () => {
+    check = 'ease';
+ }
+
 
 
 function creat(COUNT_H = select.value, COUNT_V  = select.value) {
     COUNT_H = select.value;
     COUNT_V = COUNT_H;
-    console.log('here creat  ', select.value);
 
     let div_container = document.createElement("div");
 
@@ -32,12 +39,14 @@ function creat(COUNT_H = select.value, COUNT_V  = select.value) {
             let div_item = document.createElement("div");
 
             div_item.onmouseover = () => {
-                
-
+            
                 div_item.style.backgroundColor = currentColor;
                 if(check == 'random') {
                     div_item.style.backgroundColor = getRandomColor();
-                    console.log(getRandomColor());
+
+                }
+                if (check == 'ease'){
+                    div_item.style.backgroundColor = '#ffffff'
                 }
             }
 
