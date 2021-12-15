@@ -165,9 +165,12 @@ body {
 .item {
     flex: 1;
     background-color: rgb(255, 255, 255);
-    border: 0.1px solid black;
-    /* transition: all 1s ease; */
+    border: 0.1px solid #C4C3C3;
 }
+.hovering_mode-item {
+    transition: background-color 2s ease-in;
+}
+
 /* .item:hover {
     background-color: rgb(23, 170, 43);
 } */

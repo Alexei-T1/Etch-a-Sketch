@@ -7,7 +7,6 @@ let currentColor = colorInput.value;
 
 function setColor(e) {
     const labelColor = document.querySelector('.set_color');
-    console.log('load')
     if(labelColor.style.backgroundColor !=  colorInput.value) {
         labelColor.style.backgroundColor = colorInput.value;
         currentColor = colorInput.value
